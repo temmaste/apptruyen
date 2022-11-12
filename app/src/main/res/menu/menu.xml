@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_thang"
+        android:title="Theo Tuần" />
+    <item
+        android:id="@+id/navigation_mua"
+        android:title="Theo Mùa" />
+    <item
+        android:id="@+id/navigation_yeuthich"
+        android:title="Theo Yêu thích" />
+
+
+</menu>

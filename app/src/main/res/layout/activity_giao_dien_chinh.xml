@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_GiaoDienChinh"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:text="Đề Xuất"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_giaodienchinh_search"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/ic_search"
+            />
+        <ImageView
+            android:id="@+id/img_giaodienchinh_letter"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/icon_letter"
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcw_giaodienchinh_dexuat"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Truyện mới Cập Nhật"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcw_giaodienchinh_truyenmoicapnhat"
+        android:layout_width="match_parent"
+        android:layout_height="423dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        android:layout_margin="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/purple_200"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/ln_giaodienchinh_xephang"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight=".2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_sephang"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xếp hạng"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ln_giaodienchinh_phanloai"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight=".2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_phanloai"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phân Loại"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ln_giaodienchinh_khampha"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight=".2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_khampha"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Khám Pha"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="7dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ln_giaodienchinh_yeuthich"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight=".2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_heart"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yêu Thích"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ln_giaodienchinh_toi"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight=".2"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_person"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tôi"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
