@@ -2,4 +2,8 @@
     <string name="app_name">App Truyen</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dangnhap">Đăng nhập</string>
+    <string name="nhap_mat_khau">mật khẩu</string>
+    <string name="nhap_tai_khoan">tài khoản</string>
+    <string name="welcom">XIN CHÀO</string>
 </resources>
