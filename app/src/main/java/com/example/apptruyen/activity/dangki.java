@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.apptruyen.R;
+
 public class dangki extends AppCompatActivity {
 
     @Override

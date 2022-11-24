@@ -6,4 +6,6 @@
     <string name="nhap_mat_khau">mật khẩu</string>
     <string name="nhap_tai_khoan">tài khoản</string>
     <string name="welcom">XIN CHÀO</string>
+    <string name="dangki">ĐĂNG KÍ</string>
+    <string name="nhap_lai_mat_khau">nhập lại mật khẩu</string>
 </resources>
