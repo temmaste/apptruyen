@@ -1,8 +1,11 @@
 package com.example.apptruyen.api;
 
 import com.example.apptruyen.model.Nguoidung;
+import com.example.apptruyen.model.Truyen;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -17,4 +20,7 @@ public interface serviceApi {
 
    @GET("nguoidung/dangnhap")
    Call<Boolean> dangnhapApi(@Query("username") String username,@Query("password") String password);
+
+   @GET("/truyen")
+   Call<List<Truyen>> getTruyen();
 }
