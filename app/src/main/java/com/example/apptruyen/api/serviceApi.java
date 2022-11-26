@@ -24,9 +24,6 @@ public interface serviceApi {
     Call<Boolean> dangkiApi(@Query("name") String name,@Query("username") String username,@Query("password") String password);
 
 
-    @GET("nguoidung/dangki")
-    Call<Boolean> dangki1Api(@Query("name") String name,@Query("username") String username,@Query("password") String password);
-
    @GET("/truyen")
    Call<List<Truyen>> getTruyen();
 }
