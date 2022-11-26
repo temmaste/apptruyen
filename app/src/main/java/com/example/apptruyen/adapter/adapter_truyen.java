@@ -47,14 +47,14 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
         public recyclerViewHoder(@NonNull View itemView) {
             super(itemView);
             ten=itemView.findViewById(R.id.tv_item_tentruyen);
-            hinh=itemView.findViewById(R.id.iv_item_hinhtruyen);
+            //hinh=itemView.findViewById(R.id.iv_item_hinhtruyen);
         }
         void setData(Truyen tr){
             ten.setText(tr.getTentruyen());
-            byte[] bt= Base64.decode(tr.getHinh(),0);
-            //byte to Bitmap
-            Bitmap bm = BitmapFactory.decodeByteArray(bt,0,bt.length,null);
-            hinh.setImageBitmap(bm);
+//            byte[] bt= Base64.decode(tr.getHinh(),0);
+//            //byte to Bitmap
+//            Bitmap bm = BitmapFactory.decodeByteArray(bt,0,bt.length,null);
+//            hinh.setImageBitmap(bm);
         }
     }
 }
