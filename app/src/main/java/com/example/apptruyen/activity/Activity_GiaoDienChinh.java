@@ -16,8 +16,8 @@ import java.util.List;
 
 public class Activity_GiaoDienChinh extends AppCompatActivity {
 
-    RecyclerView rcv_truyenmoi;
-    LinearLayout ln_xephang,ln_phanloai;
+    RecyclerView rcv_truyenmoi,rcv_dexuat;
+    LinearLayout ln_xephang,ln_phanloai,;
     List<Truyen> dsTruyen = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,9 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
 
     private void addControls() {
         rcv_truyenmoi=findViewById(R.id.rcw_giaodienchinh_truyenmoicapnhat);
+        rcv_dexuat=findViewById(R.id.rcw_giaodienchinh_dexuat);
         ln_xephang = findViewById(R.id.ln_giaodienchinh_xephang);
         ln_phanloai=findViewById(R.id.ln_giaodienchinh_phanloai);
+
     }
 }
