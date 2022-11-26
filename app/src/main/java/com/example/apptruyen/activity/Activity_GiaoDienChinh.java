@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 
 import com.example.apptruyen.R;
+import com.example.apptruyen.adapter.adapter_truyen;
 import com.example.apptruyen.api.serviceApi;
 import com.example.apptruyen.model.Truyen;
 
@@ -19,6 +20,7 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
     RecyclerView rcv_truyenmoi,rcv_dexuat;
     LinearLayout ln_xephang,ln_phanloai;
     List<Truyen> dsTruyen = new ArrayList<>();
+    private adapter_truyen adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +28,15 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
 
         addControls();
 
+        //lay ds truyen trong api
         try {
             dsTruyen = serviceApi.api.getTruyen().execute().body();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        adapter= new adapter_truyen(dsTruyen);
+        rcv_truyenmoi.setAdapter(adapter);
     }
 
     private void addControls() {

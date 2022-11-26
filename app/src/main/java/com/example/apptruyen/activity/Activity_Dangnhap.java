@@ -36,6 +36,8 @@ public class Activity_Dangnhap extends AppCompatActivity {
                     Boolean result = response.body();
                     if(result==true){
                         Toast.makeText(Activity_Dangnhap.this,"thanh cong",Toast.LENGTH_SHORT).show();
+                        Intent i =new Intent(Activity_Dangnhap.this,Activity_GiaoDienChinh.class);
+                        startActivity(i);
                     }else{
                         Toast.makeText(Activity_Dangnhap.this,"that bai",Toast.LENGTH_SHORT).show();
                     }
