@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.Activity_dangki">
+    tools:context=".activity.dangki">
     <TextView
         android:id="@+id/textViewSignIn"
         android:layout_width="wrap_content"
@@ -47,6 +47,23 @@
         >
         <EditText
             android:translationZ="10dp"
+            android:id="@+id/ed_dangki_inputten"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="tên người dùng"
+            app:layout_constraintTop_toBottomOf="@id/textViewSignIn"
+            android:textSize="16sp"
+            android:paddingStart="35dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="60dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/background_edittext_signin"
+            />
+        <EditText
+            android:translationZ="10dp"
             android:id="@+id/ed_dangki_inputEmail"
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -56,7 +73,6 @@
             android:paddingStart="35dp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:layout_marginTop="60dp"
             android:layout_marginStart="30dp"
             android:layout_marginEnd="30dp"
             android:background="@drawable/background_edittext_signin"
