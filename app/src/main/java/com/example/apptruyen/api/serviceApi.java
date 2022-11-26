@@ -29,4 +29,6 @@ public interface serviceApi {
    @GET("/truyen")
    Call<List<Truyen>> getTruyen();
 
+    @GET("/truyen")
+    Call<List<Truyen>> get2Truyen();
 }
