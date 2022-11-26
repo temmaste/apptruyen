@@ -48,5 +48,9 @@ public class Activity_Dangnhap extends AppCompatActivity {
                 }
             });
         });
+        findViewById(R.id.tv_dangnhap_dangki).setOnClickListener(v->{
+            Intent i =new Intent(Activity_Dangnhap.this,Activity_dangki.class);
+            startActivity(i);
+        });
     }
 }

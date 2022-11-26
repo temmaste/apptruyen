@@ -47,7 +47,13 @@ public class Activity_dangki extends AppCompatActivity {
                             ,username.getText().toString().trim(),password.getText().toString().trim()).enqueue(new Callback<Boolean>() {
                         @Override
                         public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-                            Toast.makeText(Activity_dangki.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
+                            if(response.body()){
+                                Toast.makeText(Activity_dangki.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
+
+                            }else{
+                                Toast.makeText(Activity_dangki.this, "Tạo tài khoản không thành công", Toast.LENGTH_SHORT).show();
+
+                            }
                         }
 
                         @Override
@@ -62,6 +68,7 @@ public class Activity_dangki extends AppCompatActivity {
                 Toast.makeText(this, "Mật khẩu không hợp lệ", Toast.LENGTH_SHORT).show();
             }
         }
+
     }
 
     public static boolean isValidPassword(String s) {
