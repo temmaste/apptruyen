@@ -17,7 +17,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class dangki extends AppCompatActivity {
+public class Activity_dangki extends AppCompatActivity {
+
     EditText name,username,password,passwordagain;
     TextView btndangki;
     @Override
@@ -36,7 +37,7 @@ public class dangki extends AppCompatActivity {
 
     private void checkAndSignup() {
         if(name.getText().toString().isEmpty()||username.getText().toString().isEmpty()
-        ||password.getText().toString().isEmpty()||password.getText().toString().isEmpty()){
+                ||password.getText().toString().isEmpty()||password.getText().toString().isEmpty()){
             Toast.makeText(this, "Vui lòng nhập đầy đủ", Toast.LENGTH_SHORT).show();
         }else{
 
@@ -46,12 +47,12 @@ public class dangki extends AppCompatActivity {
                             ,username.getText().toString().trim(),password.getText().toString().trim()).enqueue(new Callback<Boolean>() {
                         @Override
                         public void onResponse(Call<Boolean> call, Response<Boolean> response) {
-                            Toast.makeText(dangki.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Activity_dangki.this, "Tạo tài khoản thành công", Toast.LENGTH_SHORT).show();
                         }
 
                         @Override
                         public void onFailure(Call<Boolean> call, Throwable t) {
-                            Toast.makeText(dangki.this, "Tạo tài khoản thất bại", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Activity_dangki.this, "Tạo tài khoản thất bại", Toast.LENGTH_SHORT).show();
                         }
                     });
                 }else{
@@ -77,5 +78,4 @@ public class dangki extends AppCompatActivity {
         passwordagain = findViewById(R.id.ed_dangki_inputPasswordAgain);
         btndangki = findViewById(R.id.btn_dangki_btnLogin);
     }
-
 }
