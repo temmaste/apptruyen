@@ -17,7 +17,7 @@ import java.util.List;
 public class Activity_GiaoDienChinh extends AppCompatActivity {
 
     RecyclerView rcv_truyenmoi,rcv_dexuat;
-    LinearLayout ln_xephang,ln_phanloai,;
+    LinearLayout ln_xephang,ln_phanloai;
     List<Truyen> dsTruyen = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
