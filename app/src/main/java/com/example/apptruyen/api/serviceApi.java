@@ -4,13 +4,10 @@ import com.example.apptruyen.model.Nguoidung;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface serviceApi {
@@ -20,9 +17,4 @@ public interface serviceApi {
 
    @GET("nguoidung/dangnhap")
    Call<Boolean> dangnhapApi(@Query("username") String username,@Query("password") String password);
-
-
-
-   @POST("nguoidung/dangki")
-   Call<Boolean> dangkiApi(@Query("name") String name,@Query("username") String username,@Query("password") String password);
 }
