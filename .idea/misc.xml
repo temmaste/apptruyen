@@ -3,18 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/drawable-v24/background_edittext_signin.xml" value="0.215" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/drawable-v24/background_user_login.xml" value="0.2085" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/drawable-v24/ic_eye.xml" value="0.2085" />
+        <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/drawable/background_tv_xem_tt_theloai.xml" value="0.215" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/activity_dangki.xml" value="0.25" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/activity_dangnhap.xml" value="0.25" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/activity_giao_dien_chinh.xml" value="0.25" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/activity_phan_loai.xml" value="0.25" />
+        <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/activity_xem_tt_truyen.xml" value="0.264" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/fragment_x_h_tuan.xml" value="0.25" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/layout/item_recyclerview_phanloai.xml" value="0.25" />
         <entry key="..\:/Users/thinh/AndroidStudioProjects/apptruyen/app/src/main/res/menu/menu.xml" value="0.25" />
-        <entry key="..\:/nghia/nam4_hk1/do_an_chuyen_nganh/apptruyen_code/app/src/main/res/layout/activity_dangki.xml" value="0.1" />
-        <entry key="..\:/nghia/nam4_hk1/do_an_chuyen_nganh/apptruyen_code/app/src/main/res/layout/activity_dangnhap.xml" value="0.13645833333333332" />
         <entry key="..\:/nghia/nam4_hk1/do_an_chuyen_nganh/apptruyen_code/app/src/main/res/layout/activity_giao_dien_chinh.xml" value="0.2" />
         <entry key="..\:/nghia/nam4_hk1/do_an_chuyen_nganh/apptruyen_code/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/nghia/nam4_hk1/do_an_chuyen_nganh/apptruyen_code/app/src/main/res/layout/activity_phan_loai.xml" value="0.2" />
