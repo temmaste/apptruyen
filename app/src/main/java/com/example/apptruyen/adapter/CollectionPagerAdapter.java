@@ -46,7 +46,7 @@ public class CollectionPagerAdapter extends FragmentStatePagerAdapter {
                 title ="chi tiết";
                 break;
             case 1:
-                title ="chapter";
+                title ="số chương";
                 break;
         }
         return title;

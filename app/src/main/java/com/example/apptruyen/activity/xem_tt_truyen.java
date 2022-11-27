@@ -22,6 +22,11 @@ public class xem_tt_truyen extends AppCompatActivity {
         CollectionPagerAdapter adapter = new CollectionPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        addEvent();
+    }
+
+    private void addEvent() {
+        
     }
 
     private void addControl() {

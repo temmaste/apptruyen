@@ -3,12 +3,384 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.XemTTchitiet">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.XemTTchitiet"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    >
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+      <LinearLayout
+          android:id="@+id/layout_luotxem"
+          android:layout_width="match_parent"
+          android:translationZ="10dp"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toTopOf="parent"
+          android:layout_margin="10dp"
+          android:background="@drawable/background_fragment_tv_chitiet_luotxem"
+          android:padding="10dp"
+          >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Tổng lượt xem :"
+             android:textColor="@color/white"
+             android:layout_marginStart="20dp"
+             android:textSize="27sp"
+             android:fontFamily="@font/donglebold"
+             android:includeFontPadding="true"
+             />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="20.000"
+             android:layout_marginStart="20dp"
+             android:textColor="@color/white"
+             android:includeFontPadding="true"
+             android:fontFamily="@font/donglebold"
+             android:textSize="25sp"/>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Người xem"
+             android:layout_marginStart="8dp"
+             android:textColor="@color/white"
+             android:includeFontPadding="true"
+             android:fontFamily="@font/donglebold"
+             android:textSize="25sp"/>
+      </LinearLayout>
+      <TextView
+          android:id="@+id/tv_xem_chitiet_1"
+          app:layout_constraintTop_toBottomOf="@id/layout_luotxem"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Mô tả "
+          android:layout_marginTop="10dp"
+          app:layout_constraintStart_toStartOf="@id/layout_luotxem"
+          android:layout_marginStart="8dp"
+          android:textColor="@color/black"
+          android:includeFontPadding="true"
+          android:fontFamily="@font/donglebold"
+          android:textSize="25sp"/>
+      <TextView
+          android:id="@+id/tv_xem_chitiet_mota"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          android:text="Truyện nói về một thằng cướp biển, có ước mơ trở thành Hokage"
+          app:layout_constraintStart_toStartOf="@id/layout_luotxem"
+          android:layout_marginStart="8dp"
+          android:textColor="@color/black"
+          android:includeFontPadding="true"
+          android:lineSpacingExtra="-10dp"
+          app:layout_constraintTop_toBottomOf="@id/tv_xem_chitiet_1"
+          android:fontFamily="@font/dongleregular"
+          android:textSize="25sp"/>
+      <TextView
+         android:id="@+id/btn_xem_chitiet_doctruyen"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:layout_constraintTop_toBottomOf="@id/tv_xem_chitiet_mota"
+          android:text="Bắt đầu xem"
+          android:fontFamily="@font/donglebold"
+         android:textSize="23sp"
+         android:gravity="center"
+         android:textColor="@color/white"
+          android:layout_marginStart="10dp"
+          android:layout_marginEnd="10dp"
+          android:layout_marginTop="10dp"
+          android:padding="4dp"
+         android:background="@drawable/background_tv_xem_tt_doctruyen"
+         />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+      <TextView
+          android:id="@+id/tv_xem_chitiet_2"
+          app:layout_constraintTop_toBottomOf="@id/btn_xem_chitiet_doctruyen"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Truyện đề xuất "
+          android:layout_marginTop="10dp"
+          app:layout_constraintStart_toStartOf="@id/layout_luotxem"
+          android:layout_marginStart="8dp"
+          android:textColor="@color/black"
+          android:includeFontPadding="true"
+          android:fontFamily="@font/donglebold"
+          android:textSize="25sp"/>
+      <LinearLayout
+          android:id="@+id/layout_dexuat"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="10dp"
+          app:layout_constraintTop_toBottomOf="@id/tv_xem_chitiet_2"
+          android:orientation="vertical"
+          >
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+
+             android:layout_weight="4"
+             >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_weight="1">
+               <androidx.cardview.widget.CardView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                  app:cardCornerRadius="8dp">
+                  <ImageView
+
+                      android:id="@+id/img_xem_chitiet_dx_1"
+                      android:layout_width="110dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/img"
+                      android:scaleType="fitXY"
+                      />
+               </androidx.cardview.widget.CardView>
+
+               <TextView
+                   android:id="@+id/tv_xem_chitiet_dx_1"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:includeFontPadding="true"
+                   android:layout_gravity="center"
+                   android:text="Đấu La Đại Lục"
+                   android:fontFamily="@font/dongleregular"
+                   android:textSize="20sp"
+                   android:textAlignment="textStart"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+               <androidx.cardview.widget.CardView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   app:cardCornerRadius="8dp">
+                  <ImageView
+
+                      android:id="@+id/img_xem_chitiet_dx_2"
+                      android:layout_width="110dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/img"
+                      android:scaleType="fitXY"
+                      />
+               </androidx.cardview.widget.CardView>
+               <TextView
+                   android:id="@+id/tv_xem_chitiet_dx_2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:includeFontPadding="true"
+                   android:text="Đấu La Đại Lục"
+                   android:layout_gravity="center"
+                   android:fontFamily="@font/dongleregular"
+                   android:textSize="20sp"
+                   android:textAlignment="textStart"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+               <androidx.cardview.widget.CardView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   app:cardCornerRadius="8dp">
+                  <ImageView
+
+                      android:id="@+id/img_xem_chitiet_dx_3"
+                      android:layout_width="110dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/img"
+                      android:scaleType="fitXY"
+                      />
+               </androidx.cardview.widget.CardView>
+               <TextView
+                   android:id="@+id/tv_xem_chitiet_dx_3"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:includeFontPadding="true"
+                   android:text="Đấu La Đại Lục"
+                   android:layout_gravity="center"
+                   android:fontFamily="@font/dongleregular"
+                   android:textSize="20sp"
+                   android:textAlignment="textStart"/>
+            </LinearLayout>
+         </LinearLayout>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+
+             android:layout_marginTop="10dp"
+             android:layout_weight="4"
+             >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:layout_weight="1">
+               <androidx.cardview.widget.CardView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   app:cardCornerRadius="8dp">
+                  <ImageView
+
+                      android:id="@+id/img_xem_chitiet_dx_4"
+                      android:layout_width="110dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/img"
+                      android:scaleType="fitXY"
+                      />
+               </androidx.cardview.widget.CardView>
+               <TextView
+                   android:id="@+id/tv_xem_chitiet_dx_4"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:includeFontPadding="true"
+                   android:layout_gravity="center"
+                   android:text="Đấu La Đại Lục"
+                   android:fontFamily="@font/dongleregular"
+                   android:textSize="20sp"
+                   android:textAlignment="textStart"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+               <androidx.cardview.widget.CardView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   app:cardCornerRadius="8dp">
+                  <ImageView
+
+                      android:id="@+id/img_xem_chitiet_dx_5"
+                      android:layout_width="110dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/img"
+                      android:scaleType="fitXY"
+                      />
+               </androidx.cardview.widget.CardView>
+               <TextView
+                   android:id="@+id/tv_xem_chitiet_dx_5"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:includeFontPadding="true"
+                   android:layout_gravity="center"
+                   android:text="Đấu La Đại Lục"
+                   android:fontFamily="@font/dongleregular"
+                   android:textSize="20sp"
+                   android:textAlignment="textStart"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="1">
+               <androidx.cardview.widget.CardView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   app:cardCornerRadius="8dp">
+                  <ImageView
+
+                      android:id="@+id/img_xem_chitiet_dx_6"
+                      android:layout_width="110dp"
+                      android:layout_height="120dp"
+                      android:src="@drawable/img"
+                      android:scaleType="fitXY"
+                      />
+               </androidx.cardview.widget.CardView>
+               <TextView
+                   android:id="@+id/tv_xem_chitiet_dx_6"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="@color/black"
+                   android:layout_gravity="center"
+                   android:includeFontPadding="true"
+                   android:text="Đấu La Đại Lục"
+                   android:fontFamily="@font/dongleregular"
+                   android:textSize="20sp"
+                   android:textAlignment="textStart"/>
+            </LinearLayout>
+         </LinearLayout>
+
+      </LinearLayout>
+      <View
+          android:id="@+id/v_xem_chitiet_cutpage_1"
+          android:layout_width="match_parent"
+          android:layout_height="10dp"
+          android:background="@drawable/background_cross_page"
+          app:layout_constraintTop_toBottomOf="@id/layout_dexuat"
+          android:layout_marginTop="10dp"
+          />
+      <TextView
+          android:id="@+id/tv_xem_chitiet_3"
+          app:layout_constraintTop_toBottomOf="@id/v_xem_chitiet_cutpage_1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Bình luận "
+          android:layout_marginTop="10dp"
+          app:layout_constraintStart_toStartOf="@id/layout_luotxem"
+          android:layout_marginStart="8dp"
+          android:textColor="@color/black"
+          android:includeFontPadding="true"
+          android:fontFamily="@font/donglebold"
+          android:textSize="25sp"/>
+      <ListView
+         android:id="@+id/lv_xem_chitiet_binhluan"
+       android:layout_width="match_parent"
+       android:layout_height="220dp"
+          android:padding="10dp"
+         app:layout_constraintTop_toBottomOf="@id/tv_xem_chitiet_3"/>
+      <LinearLayout
+         android:id="@+id/layout_input_binhluan"
+          android:layout_width="match_parent"
+          app:layout_constraintTop_toBottomOf="@id/lv_xem_chitiet_binhluan"
+          android:layout_height="wrap_content"
+          android:padding="5dp"
+          android:orientation="horizontal">
+         <EditText
+             android:layout_width="0dp"
+             android:layout_height="40dp"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:layout_marginStart="10dp"
+            android:hint="Nói gì đi nào,biết đâu lại hot?"
+            android:background="@drawable/background_edittext_xem_tt"
+            android:fontFamily="@font/dongleregular"
+            android:padding="10dp"/>
+            <ImageView
+               android:id="@+id/btn_xem_chitiet_binhluan_send"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+               android:src="@drawable/ic_btn_send"
+               android:padding="3dp"
+               android:layout_marginStart="10dp"
+               android:layout_marginEnd="10dp"/>
+
+      </LinearLayout>
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
 
 </FrameLayout>
