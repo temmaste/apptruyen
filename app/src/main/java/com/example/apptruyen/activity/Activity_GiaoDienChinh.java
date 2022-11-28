@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -39,6 +40,7 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
             public void onResponse(Call<List<Truyen>> call, Response<List<Truyen>> response) {
                 //xu ly du lieu tra ve
                 dsTruyen=response.body();
+                Log.d("listtruyen",dsTruyen.get(0).getTentruyen());
             }
 
             @Override

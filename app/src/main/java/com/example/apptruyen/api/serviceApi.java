@@ -17,12 +17,12 @@ import retrofit2.http.Query;
 public interface serviceApi {
     Gson gson = new GsonBuilder().setDateFormat("yyyy/mm/dd HH:mm:ss").create();
    serviceApi api= new Retrofit.Builder()
-           .baseUrl("http://192.168.0.6:8080/undungdoctruyen/rest/").addConverterFactory(GsonConverterFactory.create(gson)).build().create(serviceApi.class);
+           .baseUrl("http://172.16.243.40:8080/undungdoctruyen/rest/").addConverterFactory(GsonConverterFactory.create(gson)).build().create(serviceApi.class);
 
    @GET("nguoidung/dangnhap")
    Call<Boolean> dangnhapApi(@Query("username") String username,@Query("password") String password);
     @POST("nguoidung/dangki")
     Call<Boolean> dangkiApi(@Query("name") String name,@Query("username") String username,@Query("password") String password);
-   @GET("/truyen")
+   @GET("truyen")
    Call<List<Truyen>> getTruyen();
 }

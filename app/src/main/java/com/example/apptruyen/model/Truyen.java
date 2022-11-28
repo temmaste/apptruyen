@@ -3,15 +3,14 @@ package com.example.apptruyen.model;
 import java.util.Date;
 
 public class Truyen {
-    private Integer matruyen;
-
+    private int matruyen;
     private Tacgia tacgia;
     private String tentruyen;
     private String mota;
-    private Date ngaydang;
+    private String ngaydang;
     private String hinh;
 
-    public Truyen(Integer matruyen, Tacgia tacgia, String tentruyen, String mota, Date ngaydang, String hinh) {
+    public Truyen(Integer matruyen, Tacgia tacgia, String tentruyen, String mota, String ngaydang, String hinh) {
         this.matruyen = matruyen;
         this.tacgia = tacgia;
         this.tentruyen = tentruyen;
@@ -55,11 +54,11 @@ public class Truyen {
         this.mota = mota;
     }
 
-    public Date getNgaydang() {
+    public String getNgaydang() {
         return ngaydang;
     }
 
-    public void setNgaydang(Date ngaydang) {
+    public void setNgaydang(String ngaydang) {
         this.ngaydang = ngaydang;
     }
 
