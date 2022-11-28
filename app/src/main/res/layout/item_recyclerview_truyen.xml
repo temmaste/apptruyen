@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="200dp"
+    android:layout_height="250dp"
     android:orientation="vertical"
+    android:background="@color/purple_200"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="370dp"
+        android:layout_height="170dp"
         android:gravity="center">
 
         <ImageView
             android:id="@+id/iv_item_hinhtruyen"
-            android:layout_width="330dp"
-            android:layout_height="330dp" />
+            android:layout_width="150dp"
+            android:layout_height="160dp" />
     </LinearLayout>
     <TextView
         android:id="@+id/tv_item_tentruyen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ten Truyen"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:textSize="35dp"
         android:textColor="#1655C0"
         android:textStyle="bold"

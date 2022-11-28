@@ -26,7 +26,7 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
 
     @NonNull
     @Override
-    public adapter_truyen.recyclerViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public recyclerViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new recyclerViewHoder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_recyclerview_truyen,parent,false));
     }
 
@@ -47,7 +47,7 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
         public recyclerViewHoder(@NonNull View itemView) {
             super(itemView);
             ten=itemView.findViewById(R.id.tv_item_tentruyen);
-            //hinh=itemView.findViewById(R.id.iv_item_hinhtruyen);
+            hinh=itemView.findViewById(R.id.iv_item_hinhtruyen);
         }
         void setData(Truyen tr){
             ten.setText(tr.getTentruyen());

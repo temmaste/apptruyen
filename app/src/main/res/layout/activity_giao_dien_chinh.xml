@@ -56,7 +56,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcw_giaodienchinh_truyenmoicapnhat"
         android:layout_width="match_parent"
-        android:layout_height="423dp"
+        android:layout_height="473dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         android:layout_margin="5dp"
         />

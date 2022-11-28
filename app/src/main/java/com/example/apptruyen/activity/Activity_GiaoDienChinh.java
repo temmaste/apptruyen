@@ -26,7 +26,7 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
     RecyclerView rcv_truyenmoi,rcv_dexuat;
     LinearLayout ln_xephang,ln_phanloai;
     List<Truyen> dsTruyen = new ArrayList<>();
-    private adapter_truyen adapter;
+    private adapter_truyen adapterTruyen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +39,9 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Truyen>> call, Response<List<Truyen>> response) {
                 //xu ly du lieu tra ve
+                //Toast.makeText(Activity_GiaoDienChinh.this, "lay thanh cong", Toast.LENGTH_SHORT).show();
                 dsTruyen=response.body();
-                Log.d("listtruyen",dsTruyen.get(0).getTentruyen());
+                //Log.d("listtruyen",dsTruyen.get(0).getTentruyen());
             }
 
             @Override
@@ -50,10 +51,9 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
             }
         });
 
-        adapter= new adapter_truyen(dsTruyen);
-        rcv_truyenmoi.setAdapter(adapter);
+        adapterTruyen= new adapter_truyen(dsTruyen);
+        rcv_truyenmoi.setAdapter(adapterTruyen);
     }
-
     private void addControls() {
         rcv_truyenmoi=findViewById(R.id.rcw_giaodienchinh_truyenmoicapnhat);
         rcv_dexuat=findViewById(R.id.rcw_giaodienchinh_dexuat);
