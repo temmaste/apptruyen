@@ -1,8 +1,9 @@
 package com.example.apptruyen.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Truyen {
+public class Truyen implements Serializable {
     private int matruyen;
     private Tacgia tacgia;
     private String tentruyen;

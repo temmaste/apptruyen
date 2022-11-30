@@ -40,7 +40,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcw_giaodienchinh_dexuat"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="165dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_margin="5dp"
         android:orientation="horizontal"
@@ -64,6 +64,7 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@color/purple_200"
+        android:gravity="end"
         android:weightSum="1">
 
         <LinearLayout
