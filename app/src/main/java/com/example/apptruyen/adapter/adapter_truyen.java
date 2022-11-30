@@ -51,10 +51,10 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
         }
         void setData(Truyen tr){
             ten.setText(tr.getTentruyen());
-//            byte[] bt= Base64.decode(tr.getHinh(),0);
-//            //byte to Bitmap
-//            Bitmap bm = BitmapFactory.decodeByteArray(bt,0,bt.length,null);
-//            hinh.setImageBitmap(bm);
+            byte[] bt= Base64.decode(tr.getHinh(),0);
+            //byte to Bitmap
+            Bitmap bm = BitmapFactory.decodeByteArray(bt,0,bt.length,null);
+            hinh.setImageBitmap(bm);
         }
     }
 }

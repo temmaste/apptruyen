@@ -39,9 +39,12 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Truyen>> call, Response<List<Truyen>> response) {
                 //xu ly du lieu tra ve
-                //Toast.makeText(Activity_GiaoDienChinh.this, "lay thanh cong", Toast.LENGTH_SHORT).show();
-                dsTruyen=response.body();
-                //Log.d("listtruyen",dsTruyen.get(0).getTentruyen());
+                if(response.body()!=null){
+                    for(Truyen truyen: response.body()){
+                        dsTruyen.add(0,truyen);
+                    }
+                    adapterTruyen.notifyDataSetChanged();
+                }
             }
 
             @Override
@@ -53,6 +56,7 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
 
         adapterTruyen= new adapter_truyen(dsTruyen);
         rcv_truyenmoi.setAdapter(adapterTruyen);
+        rcv_dexuat.setAdapter(adapterTruyen);
     }
     private void addControls() {
         rcv_truyenmoi=findViewById(R.id.rcw_giaodienchinh_truyenmoicapnhat);
