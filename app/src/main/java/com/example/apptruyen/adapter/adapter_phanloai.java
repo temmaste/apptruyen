@@ -32,7 +32,7 @@ public class adapter_phanloai extends RecyclerView.Adapter<adapter_phanloai.recy
 
     @Override
     public int getItemCount() {
-        return 0;
+        return dstl.size();
     }
     public class recyclerViewHoder extends RecyclerView.ViewHolder{
         TextView tentl;
@@ -41,7 +41,7 @@ public class adapter_phanloai extends RecyclerView.Adapter<adapter_phanloai.recy
             tentl=itemView.findViewById(R.id.tv_item_phanloai);
         }
         void setDate(Theloai tl){
-            tentl.setText(tl.getTenTheLoai());
+            tentl.setText(tl.getTentheloai());
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.example.apptruyen.api;
 
-import com.example.apptruyen.model.Nguoidung;
+import com.example.apptruyen.model.Tap;
 import com.example.apptruyen.model.Theloai;
 import com.example.apptruyen.model.Truyen;
 import com.google.gson.Gson;
@@ -18,7 +18,7 @@ import retrofit2.http.Query;
 public interface serviceApi {
     Gson gson = new GsonBuilder().setDateFormat("yyyy/mm/dd HH:mm:ss").create();
    serviceApi api= new Retrofit.Builder()
-           .baseUrl("http://192.168.0.6:8080/undungdoctruyen/rest/").addConverterFactory(GsonConverterFactory.create(gson)).build().create(serviceApi.class);
+           .baseUrl("http://172.20.70.227:8080/undungdoctruyen/rest/").addConverterFactory(GsonConverterFactory.create(gson)).build().create(serviceApi.class);
 
    @GET("nguoidung/dangnhap")
    Call<Boolean> dangnhapApi(@Query("username") String username,@Query("password") String password);
@@ -28,4 +28,6 @@ public interface serviceApi {
    Call<List<Truyen>> getTruyen();
     @GET("theloai")
     Call<List<Theloai>> getTheLoai();
+    @GET("chuong")
+    Call<List<Tap>> getTap();
 }

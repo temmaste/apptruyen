@@ -10,16 +10,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.apptruyen.R;
+import com.example.apptruyen.clicklistenner.clickTruyen;
 import com.example.apptruyen.model.Truyen;
 
 import java.util.List;
 
 public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recyclerViewHoder> {
     private List<Truyen> dsTruyen;
-
-    public adapter_truyen(List<Truyen>dsTruyen){
+    private clickTruyen clickTruyen;
+    public adapter_truyen(List<Truyen>dsTruyen,clickTruyen clickTruyen){
         this.dsTruyen=dsTruyen;
-
+        this.clickTruyen=clickTruyen;
     }
 
     @NonNull
@@ -31,7 +32,9 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
     @Override
     public void onBindViewHolder(@NonNull adapter_truyen.recyclerViewHoder holder, int position) {
         holder.setData(dsTruyen.get(position));
-
+        holder.itemView.setOnClickListener(v->{
+            clickTruyen.onCickNext(position);
+        });
     }
 
     @Override

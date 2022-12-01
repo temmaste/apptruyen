@@ -1,6 +1,7 @@
 package com.example.apptruyen.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -11,6 +12,7 @@ import android.widget.Toast;
 import com.example.apptruyen.R;
 import com.example.apptruyen.adapter.adapter_truyen;
 import com.example.apptruyen.api.serviceApi;
+import com.example.apptruyen.clicklistenner.clickTruyen;
 import com.example.apptruyen.model.Truyen;
 
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Activity_GiaoDienChinh extends AppCompatActivity  {
+public class Activity_GiaoDienChinh extends AppCompatActivity implements clickTruyen {
 
     RecyclerView rcv_truyenmoi,rcv_dexuat;
     LinearLayout ln_xephang,ln_phanloai;
@@ -54,9 +56,14 @@ public class Activity_GiaoDienChinh extends AppCompatActivity  {
             }
         });
 
-        adapterTruyen= new adapter_truyen(dsTruyen);
+        adapterTruyen= new adapter_truyen(dsTruyen,this);
         rcv_truyenmoi.setAdapter(adapterTruyen);
         //rcv_dexuat.setAdapter(adapterTruyen);
+        rcv_truyenmoi.setLayoutManager(
+
+                new GridLayoutManager(this,2)
+
+        );
         addEvent();
     }
 
@@ -76,4 +83,11 @@ public class Activity_GiaoDienChinh extends AppCompatActivity  {
     }
 
 
+    @Override
+    public void onCickNext(int posision) {
+        Truyen truyen =dsTruyen.get(posision);
+        Intent i = new Intent(Activity_GiaoDienChinh.this,xem_tt_truyen.class);
+        i.putExtra("truyen_ct",truyen);
+        startActivity(i);
+    }
 }

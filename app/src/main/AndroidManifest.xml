@@ -17,17 +17,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".activity.Activity_Tap"
+            android:exported="false" />
+        <activity
             android:name=".activity.Activity_PhanLoai"
             android:exported="false" />
         <activity
             android:name=".activity.xem_tt_truyen"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.Activity_dangki"
             android:exported="false" />
         <activity
             android:name=".activity.Activity_Dangnhap"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activity.Activity_XepHang"
             android:exported="false" />

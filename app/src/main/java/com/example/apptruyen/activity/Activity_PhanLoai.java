@@ -1,6 +1,7 @@
 package com.example.apptruyen.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -24,16 +25,12 @@ import retrofit2.Response;
 public class Activity_PhanLoai extends AppCompatActivity {
 
     RecyclerView rcv_theloai;
-    List<Theloai> dstl=new ArrayList<>();
-    private adapter_phanloai adapterPhanloai;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_phan_loai);
         addControl();
         hienTheLoai();
-        adapterPhanloai= new adapter_phanloai(dstl);
-        rcv_theloai.setAdapter(adapterPhanloai);
         addEvent();
     }
 
@@ -43,13 +40,10 @@ public class Activity_PhanLoai extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Theloai>> call, Response<List<Theloai>> response) {
                 if(response.body()!=null){
-                    dstl.clear();
-                    for(Theloai theloai: response.body()){
-                        dstl.add(0,theloai);
-                    }
-                    adapterPhanloai= new adapter_phanloai(dstl);
+                    List<Theloai> dstl=response.body();
+                    adapter_phanloai adapterPhanloai= new adapter_phanloai(dstl);
                     rcv_theloai.setAdapter(adapterPhanloai);
-                    adapterPhanloai.notifyDataSetChanged();
+                    rcv_theloai.setLayoutManager(new GridLayoutManager(Activity_PhanLoai.this, 2));
                 }
             }
 

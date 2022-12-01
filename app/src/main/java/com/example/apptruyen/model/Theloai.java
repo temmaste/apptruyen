@@ -3,29 +3,31 @@ package com.example.apptruyen.model;
 import java.io.Serializable;
 
 public class Theloai  implements Serializable{
-    private int maTheLoai;
-    private String tenTheLoai;
+    private int matheloai;
 
-    public Theloai(int maTheLoai, String tenTheLoai) {
-        this.maTheLoai = maTheLoai;
-        this.tenTheLoai = tenTheLoai;
-    }
     public Theloai() {
-
-    }
-    public int getMaTheLoai() {
-        return maTheLoai;
     }
 
-    public void setMaTheLoai(int maTheLoai) {
-        this.maTheLoai = maTheLoai;
+    private String tentheloai;
+
+    public Theloai(int matheloai, String tentheloai) {
+        this.matheloai = matheloai;
+        this.tentheloai = tentheloai;
     }
 
-    public String getTenTheLoai() {
-        return tenTheLoai;
+    public int getMatheloai() {
+        return matheloai;
     }
 
-    public void setTenTheLoai(String tenTheLoai) {
-        this.tenTheLoai = tenTheLoai;
+    public void setMatheloai(int matheloai) {
+        this.matheloai = matheloai;
+    }
+
+    public String getTentheloai() {
+        return tentheloai;
+    }
+
+    public void setTentheloai(String tentheloai) {
+        this.tentheloai = tentheloai;
     }
 }
