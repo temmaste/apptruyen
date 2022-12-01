@@ -1,8 +1,5 @@
 package com.example.apptruyen.adapter;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +19,7 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
 
     public adapter_truyen(List<Truyen>dsTruyen){
         this.dsTruyen=dsTruyen;
+
     }
 
     @NonNull
@@ -33,6 +31,7 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
     @Override
     public void onBindViewHolder(@NonNull adapter_truyen.recyclerViewHoder holder, int position) {
         holder.setData(dsTruyen.get(position));
+
     }
 
     @Override
@@ -51,10 +50,10 @@ public class adapter_truyen extends RecyclerView.Adapter<adapter_truyen.recycler
         }
         void setData(Truyen tr){
             ten.setText(tr.getTentruyen());
-            byte[] bt= Base64.decode(tr.getHinh(),0);
+            //byte[] bt= Base64.decode(tr.getHinh(),0);
             //byte to Bitmap
-            Bitmap bm = BitmapFactory.decodeByteArray(bt,0,bt.length,null);
-            hinh.setImageBitmap(bm);
+//            Bitmap bm = BitmapFactory.decodeByteArray(bt,0,bt.length,null);
+//            hinh.setImageBitmap(bm);
         }
     }
 }

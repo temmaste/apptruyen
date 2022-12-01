@@ -3,8 +3,8 @@ package com.example.apptruyen.activity;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -13,7 +13,6 @@ import com.example.apptruyen.adapter.adapter_truyen;
 import com.example.apptruyen.api.serviceApi;
 import com.example.apptruyen.model.Truyen;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,11 +20,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Activity_GiaoDienChinh extends AppCompatActivity {
+public class Activity_GiaoDienChinh extends AppCompatActivity  {
 
     RecyclerView rcv_truyenmoi,rcv_dexuat;
     LinearLayout ln_xephang,ln_phanloai;
     List<Truyen> dsTruyen = new ArrayList<>();
+    LinearLayout btn_phanloai;
     private adapter_truyen adapterTruyen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +56,24 @@ public class Activity_GiaoDienChinh extends AppCompatActivity {
 
         adapterTruyen= new adapter_truyen(dsTruyen);
         rcv_truyenmoi.setAdapter(adapterTruyen);
-        rcv_dexuat.setAdapter(adapterTruyen);
+        //rcv_dexuat.setAdapter(adapterTruyen);
+        addEvent();
     }
+
+    private void addEvent() {
+        btn_phanloai.setOnClickListener(v->{
+            Intent i =new Intent(Activity_GiaoDienChinh.this,Activity_PhanLoai.class);
+            startActivity(i);
+        });
+    }
+
     private void addControls() {
         rcv_truyenmoi=findViewById(R.id.rcw_giaodienchinh_truyenmoicapnhat);
         rcv_dexuat=findViewById(R.id.rcw_giaodienchinh_dexuat);
         ln_xephang = findViewById(R.id.ln_giaodienchinh_xephang);
         ln_phanloai=findViewById(R.id.ln_giaodienchinh_phanloai);
-
+        btn_phanloai=findViewById(R.id.ln_giaodienchinh_phanloai);
     }
+
+
 }

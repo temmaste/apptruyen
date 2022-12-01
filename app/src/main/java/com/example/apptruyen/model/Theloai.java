@@ -1,6 +1,8 @@
 package com.example.apptruyen.model;
 
-public class Theloai {
+import java.io.Serializable;
+
+public class Theloai  implements Serializable{
     private int maTheLoai;
     private String tenTheLoai;
 
